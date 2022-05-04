@@ -109,23 +109,23 @@ div.vertical {
 				parent.location.hash= hash;
 
 				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
+				$("password").attr("placeholder","wrong password");
+				$("password").val("");
 			}
 		});
 	}
 
 
 	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
+		loadPage($("password").val());
 	});
 	$("#password").keypress(function(e) {
 		if (e.which == 13) {
 
-			loadPage($("#password").val());
+			loadPage($("password").val());
 		}
 	});
-	$("#password").focus();
+	$("password").focus();
 
 	</script>
 
