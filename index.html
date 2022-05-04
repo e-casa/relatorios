@@ -1,150 +1,133 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.Apple-tab-span {white-space:pre}
-  </style>
+<title>Relatórios - Casa de Avaliação </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
+<style>
+
+body {
+
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
+}
+
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+}
+
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
+
+}
+
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+::-moz-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+</style>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;title&gt; Relatórios - Casa de Avaliação 2022 &lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">body {</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>background-image: url('grunge_patterns.jpg');</p>
-<p class="p1"><span class="Apple-tab-span">	</span>background-attachment: fixed;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>color: #333;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.box {</p>
-<p class="p1"><span class="Apple-tab-span">	</span>border-radius: 3px;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.lightbox {</p>
-<p class="p1"><span class="Apple-tab-span">	</span>zoom: 1.5;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>position: fixed;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>top: 0;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>left: 0;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>width: 100%;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>height: 100%;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>background: rgba(10, 10, 10, 0.8);</p>
-<p class="p1"><span class="Apple-tab-span">	</span>text-align: center;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>margin: auto;</p>
-<p class="p2"><br></p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">div.horizontal {</p>
-<p class="p1"><span class="Apple-tab-span">	</span>display: flex;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>justify-content: center;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>height: 100%;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">div.vertical {</p>
-<p class="p1"><span class="Apple-tab-span">	</span>display: flex;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>justify-content: center;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>width: 100%;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">::-webkit-input-placeholder {</p>
-<p class="p1"><span class="Apple-converted-space">   </span>color: #955;</p>
-<p class="p1"><span class="Apple-converted-space">   </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">::-moz-placeholder {</p>
-<p class="p1"><span class="Apple-converted-space">   </span>color: #955;</p>
-<p class="p1"><span class="Apple-converted-space">   </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">:-ms-input-placeholder {</p>
-<p class="p1"><span class="Apple-converted-space">   </span>color: #955;</p>
-<p class="p1"><span class="Apple-converted-space">   </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;div id="loginbox" class="lightbox" &gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="horizontal"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="vertical"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;div class="box"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /&gt; &lt;br /&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;button id="loginbutton" type="button"&gt;Enter&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;p id="wrongPassword" style="display: none"&gt;password errado&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"&gt;&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span> &lt;script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"&gt;&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;script type="text/javascript"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>"use strict";</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>function loadPage(pwd) {</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var hash= pwd;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>hash= Sha1.hash(pwd);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>var url= hash + "/index.html";</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$.ajax({</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>url : url,</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>dataType : "html",</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>success : function(data) {</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>window.location= url;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>},</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>error : function(xhr, ajaxOptions, thrownError) {</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>parent.location.hash= hash;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>//$("#wrongPassword").show();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$("#password").attr("placeholder","wrong password");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>$("#password").val("");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>});</p>
-<p class="p1"><span class="Apple-tab-span">	</span>}</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>("#loginbutton").on("click", function() {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>loadPage((9888492fcf38abfa31c0fad115db5f3df03b20d4).val());</p>
-<p class="p1"><span class="Apple-tab-span">	</span>});</p>
-<p class="p1"><span class="Apple-tab-span">	</span>$(9888492fcf38abfa31c0fad115db5f3df03b20d4).keypress(function(e) {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>if (e.which == 13) {</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>loadPage((9888492fcf38abfa31c0fad115db5f3df03b20d4).val());</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
-<p class="p1"><span class="Apple-tab-span">	</span>});</p>
-<p class="p1"><span class="Apple-tab-span">	</span>$(9888492fcf38abfa31c0fad115db5f3df03b20d4).focus();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">password errado</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+
+	function loadPage(pwd) {
+
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
+
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+
+				window.location= url;
+
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+
+
+				parent.location.hash= hash;
+
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+
+	</script>
+
 </body>
 </html>
