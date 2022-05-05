@@ -1,0 +1,27 @@
+name: "relatorios"
+title: "Casa de Avaliação - SME/FME Niterói"
+description: |
+  Relatórios - Casa de Avaliação
+output_dir: "_site"
+theme: theme.css
+navbar:
+  logo: images/logo_pref.jpg
+  right:
+    - text: "Início"
+      href: index.html
+    - text: "Resultados 2022"
+      href: #
+      menu:
+        - text: "Terceiro Ano"
+          href: terceiro.html
+        - text: "Quarto Ano"
+          href: quarto.html
+        - text: "Sexto Ano"
+          href: sexto.html
+        - text: "Oitavo Ano"
+          href: oitavo.html
+    - text: "Sobre"
+      href: about.html
+ 
+output: distill::distill_article
+

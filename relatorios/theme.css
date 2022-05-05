@@ -853,7 +853,7 @@ video {
 
 .full-width {
   width: 100vw;
-  height: 12vh;
+  height: auto;
 margin-left: calc(50% - 50vw);
 font-family:  'Oswald', sans-serif
 }
