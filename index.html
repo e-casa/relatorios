@@ -2966,7 +2966,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   .full-width {
     width: 100vw;
-    height: 12vh;
+    height: auto;
   margin-left: calc(50% - 50vw);
   font-family:  'Oswald', sans-serif
   }</style>
@@ -3126,6 +3126,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+  <script src="site_libs/react-17.0.0/react.min.js"></script>
+  <script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+  <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="site_libs/reactable-binding-0.2.3/reactable.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -3175,7 +3181,6 @@ Relatórios 2022
 <a href="oitavo.html">Oitavo Ano</a>
 </div>
 </div>
-<a href="about.html">Sobre</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -3226,7 +3231,7 @@ do seu computador/celular.<br/>
 <li><a href="#apresenta%C3%A7%C3%A3o">Apresentação</a></li>
 <li><a href="#níveis-de-proficiência">Níveis de proficiência</a></li>
 <li><a
-href="#quantitativo-de-estudantes-por-ano-de-escolaridade-em-cada-nível-de-proficiência">Quantitativo
+href="#percentual-de-estudantes-por-ano-de-escolaridade-em-cada-nível-de-proficiência">Quantitativo
 de estudantes por ano de escolaridade em cada nível de
 proficiência</a></li>
 <li><a href="#Percentual-de-acertos-por-ano-de-escolaridade">Percentual
@@ -3256,61 +3261,36 @@ laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
 lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
 eget nullam non.</p>
 <h2
-id="quantitativo-de-estudantes-por-ano-de-escolaridade-em-cada-nível-de-proficiência">Quantitativo
+id="percentual-de-estudantes-por-ano-de-escolaridade-em-cada-nível-de-proficiência">Percentual
 de estudantes por ano de escolaridade em cada nível de proficiência</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
-cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
-odio aenean sed. Commodo viverra maecenas accumsan lacus. Mi quis
-hendrerit dolor magna eget est lorem ipsum. Porta non pulvinar neque
-laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
-lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
-eget nullam non.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <h3 id="geral">Geral</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
-cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
-odio aenean sed. Commodo viverra maecenas accumsan lacus. Mi quis
-hendrerit dolor magna eget est lorem ipsum. Porta non pulvinar neque
-laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
-lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
-eget nullam non.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-e644a789945a664e9168" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e644a789945a664e9168">{"x":{"tag":{"name":"Reactable","attribs":{"data":{" ":["3º ano","4º ano","6º ano","8º ano"],"Nível 1":[0.0169491525423729,0.331034482758621,0.0968783638320775,0.073490813648294],"Nível 2":[0.0656236418948283,0.19264367816092,0.128094725511302,0.354330708661417],"Nível 3":[0.196870925684485,0.216551724137931,0.32508073196986,0.427821522309711],"Nível 4":[0.380269448066058,0.205057471264368,0.378902045209903,0.140419947506562],"Nível 5":[0.340286831812256,0.0547126436781609,0.0710441334768568,0.00393700787401575]},"columns":[{"accessor":" ","name":" ","type":"character","align":"center"},{"accessor":"Nível 1","name":"Nível 1","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFE4CC"},{"background":"#FFE4CC"},{"background":"#FFE4CC"},{"background":"#FFE4CC"}]},{"accessor":"Nível 2","name":"Nível 2","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFE4CC"},{"background":"#FFE4CC"},{"background":"#FFE4CC"},{"background":"#FFE4CC"}]},{"accessor":"Nível 3","name":"Nível 3","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFE4CC"},{"background":"#FFE4CC"},{"background":"#FFE4CC"},{"background":"#FFE4CC"}]},{"accessor":"Nível 4","name":"Nível 4","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FF9500"},{"background":"#FFCE95"},{"background":"#FF9501"},{"background":"#FFE4CC"}]},{"accessor":"Nível 5","name":"Nível 5","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FF9500"},{"background":"#FFD8AD"},{"background":"#FFD4A3"},{"background":"#FFE4CC"}]}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"dataKey":"de925476eb5b02641562299c2e552e55","key":"de925476eb5b02641562299c2e552e55"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
 <h3 id="º-ano">3º ano</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
-cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
-odio aenean sed. Commodo viverra maecenas accumsan lacus. Mi quis
-hendrerit dolor magna eget est lorem ipsum. Porta non pulvinar neque
-laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
-lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
-eget nullam non.</p>
+<p>A seguir, apresentam-se o quantitativo de estudantes do 3º ano por
+nível de proficiência.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/unnamed-chunk-7-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
 <h3 id="º-ano-1">4º ano</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
-cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
-odio aenean sed. Commodo viverra maecenas accumsan lacus. Mi quis
-hendrerit dolor magna eget est lorem ipsum. Porta non pulvinar neque
-laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
-lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
-eget nullam non.</p>
+<p>A seguir, apresentam-se o quantitativo de estudantes do 3º ano por
+nível de proficiência.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/unnamed-chunk-8-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
 <h3 id="º-ano-2">6º ano</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
-cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
-odio aenean sed. Commodo viverra maecenas accumsan lacus. Mi quis
-hendrerit dolor magna eget est lorem ipsum. Porta non pulvinar neque
-laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
-lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
-eget nullam non.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/unnamed-chunk-9-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
 <h3 id="º-ano-3">8º ano</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
-cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
-odio aenean sed. Commodo viverra maecenas accumsan lacus. Mi quis
-hendrerit dolor magna eget est lorem ipsum. Porta non pulvinar neque
-laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
-lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
-eget nullam non.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/unnamed-chunk-10-1.png" width="480" style="display: block; margin: auto;" /></p>
+</div>
 <h2 id="percentual-de-acertos-por-ano-de-escolaridade">Percentual de
 acertos por ano de escolaridade</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -3322,6 +3302,9 @@ laoreet suspendisse interdum. Id nibh tortor id aliquet. Erat nam at
 lectus urna duis convallis convallis tellus. Faucibus nisl tincidunt
 eget nullam non.</p>
 <h3 id="língua-portuguesa">Língua Portuguesa</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/unnamed-chunk-11-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id
 cursus metus aliquam eleifend mi in nulla. Sed odio morbi quis commodo
