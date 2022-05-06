@@ -88,7 +88,7 @@ d-appendix {
 }
 
 .distill-site-header .logo img {
-  max-height: 40px;
+  max-height: 60px;
 }
 
 .headroom {
@@ -154,6 +154,7 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
+  text-align: justify;
 }
 
 /**
@@ -853,7 +854,27 @@ video {
 
 .full-width {
   width: 100vw;
+  vertical-align: middle;
   height: auto;
 margin-left: calc(50% - 50vw);
 font-family:  'Oswald', sans-serif
 }
+
+
+.cabecalho {
+  font-size: 40px;
+  width: 100vw;
+  height: auto;
+margin-left: calc(50% - 50vw);
+font-family:  'Oswald', sans-serif
+}
+
+
+.cabecalho2 {
+  font-size: 30px;
+  width: 100vw;
+  height: auto;
+margin-left: calc(50% - 50vw);
+font-family:  'Oswald', sans-serif
+}
+
