@@ -154,7 +154,6 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
-  text-align: justify;
 }
 
 /**
