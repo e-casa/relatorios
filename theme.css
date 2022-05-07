@@ -70,6 +70,7 @@ d-appendix {
   --text-size:        18px;
   --hover-color:      #AD1D32;
   --bkgd-color:       #ffffff;
+   height: 100px;
 }
 
 .distill-site-footer {
@@ -88,14 +89,31 @@ d-appendix {
 }
 
 .distill-site-header .logo img {
-  max-height: 70px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+}
+
+
+.distill-site-header .title {
+position: relative;
+transform: translateY(-70%);
+}
+
+
+.distill-site-header .nav-right {
+    top: 25%;
+    position: relative;
 }
 
 .headroom {
   top: 20px;
 }
 
-
+d-title{
+  margin-top: 50px;
+}
 
 d-article h2 {
   border-bottom: 0;
