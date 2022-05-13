@@ -107,11 +107,12 @@ transform: translateY(-70%);
 }
 
 .headroom {
-  top: 20px;
+  top: 10px;
 }
 
+
 d-title{
-  margin-top: 5px;
+  margin-top: 0px;
 }
 
 d-article h2 {
@@ -170,7 +171,7 @@ Remove the margin in all browsers.
 */
 
 body {
- margin: auto;
+ margin: 0.1em;
 }
 
 /**
@@ -882,6 +883,7 @@ font-family:  'Oswald', sans-serif
   width: 100vw;
   height: auto;
 margin-left: calc(50% - 50vw);
+margin-right: calc(50% + 50vw);
 font-family:  'Oswald', sans-serif
 }
 
@@ -891,6 +893,7 @@ font-family:  'Oswald', sans-serif
   width: 100vw;
   height: auto;
 margin-left: calc(50% - 50vw);
+margin-right: calc(50% + 50vw);
 font-family:  'Oswald', sans-serif
 }
 

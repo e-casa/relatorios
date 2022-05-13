@@ -1,0 +1,893 @@
+---
+title: "Casa de Avaliação - 2022"
+site: distill::distill_website
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::knit_hooks$set(mysize = function(before, options, envir) {
+  if (before) 
+    return(options$size)
+})
+knitr::opts_chunk$set(size='\\small')
+knitr::opts_chunk$set(warning=FALSE)
+knitr::opts_chunk$set(message=FALSE)
+knitr::opts_chunk$set(fig.align='center')
+
+library(tidyverse)
+library(formattable)
+library(kableExtra)
+library(janitor)
+library(ggrepel)
+library(knitr)
+library(DT)
+library(viridis)
+library(hrbrthemes)
+library(readxl)
+library(itan)
+library(gridExtra)
+library(grid)
+library(reactable)
+library(crosstalk)
+library(png)
+library(grid)
+library(gridExtra)
+library(leaflet)
+library(htmltools)
+
+library(reactablefmtr)
+
+
+knitr::opts_chunk$set(tidy = FALSE,
+                      warning = FALSE,
+                      message =FALSE,
+                      echo = FALSE)
+
+
+### ideias para analisar
+# https://github.com/rfortherestofus/api-food-asset-map
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+
+
+```{css}
+d-title {
+    visibility: hidden;
+    height: 0px;
+  }
+```
+
+```{r, layout="l-screen-inset" , fig.align='center', out.width="100%" }
+knitr::include_graphics("images/barra.png")
+```
+```{r,  fig.align='center',  out.width="20%"}
+knitr::include_graphics("images/caf.png")
+```
+
+<div  class="cabecalho" >
+<span><p style= 'text-align:center'>
+<br> 
+Avaliação Diagnóstica 2022 
+</p></span></div>
+<div  class="cabecalho2" >
+<span><p style= 'text-align:center'>
+Relatório Geral da Rede 
+</p></span></div>
+
+
+
+```{r, layout="l-screen-inset" , fig.align='center', out.width="100%" }
+knitr::include_graphics("images/barra.png")
+```
+
+
+
+<div  class="full-width" style='background-color:#F4792A;color:#000000'>
+<span><p style= 'text-align:center'>
+<b>Seja bem-vindo(a)! </b><br/>
+ Navegue na página clicando nos links ou rolando a tela do seu computador/celular.<br/>
+</p></span></div><br>
+<br>
+
+
+# SEÇÕES
+
+<br>
+
+<div style='font-weight: bold'>
+
+ - [Apresentação](#apresenta%C3%A7%C3%A3o)
+ - [Taxa de Participação](#taxa-de-participa%C3%A7%C3%A3o)
+ - [Níveis de Desempenho](#níveis-de-desempenho) 
+ - [Distribuição de estudantes por ano de escolaridade em cada nível de desempenho](#distribui%C3%A7%C3%A3o-dos-estudantes-por-ano-de-escolaridade-em-cada-n%C3%ADvel-de-desempenho) 
+ - [Percentual de acertos por questão, ano de escolaridade e disciplina](#percentual-de-acertos-por-quest%C3%A3o-ano-de-escolaridade-e-disciplina)
+  - [Distribuição dos níveis alcançados pelas escolas por bairro](#distribui%C3%A7%C3%A3o-dos-n%C3%ADveis-alcan%C3%A7ados-pelas-escolas-por-bairro) 
+  
+  </div>
+
+ <!-- - [Rendimento das escolas por ano de escolaridade e disciplina](#rendimento-das-escolas-por-ano-de-escolaridade-e-disciplina)  -->
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+## Apresentação
+
+
+&nbsp; &nbsp;  A Avaliação Diagnóstica 2022 objetiva produzir informações sobre a situação de aprendizagem dos estudantes do ensino fundamental da Rede Municipal de Educação de Niterói que possibilitem potencializar as ações pedagógicas desenvolvidas no município, bem como (re)formular políticas públicas educacionais.
+
+
+&nbsp; &nbsp;  Tendo em vista a compreensão do cenário da educação de Niterói no contexto de pós-pandemia, consideramos fundamental a aplicação de instrumentos avaliativos que colaborem para a produção de um diagnóstico sobre a aprendizagem dos estudantes, a fim de que os esforços de professores e gestores (escolares e da Secretaria) estejam voltados para as necessidades identificadas. Desse modo, a Avaliação Diagnóstica 2022 constitui-se como um dos instrumentos necessários para a verificação das habilidades já desenvolvidas pelos estudantes. Trata-se de uma avaliação padronizada, aplicada aos estudantes do 3º, 4º, 6º e 8º anos do ensino fundamental, formulada com questões de Língua Portuguesa e Matemática, baseadas na Teoria de Resposta ao Item (TRI). As competências avaliadas envolvem leitura e resolução de problemas. Para a elaboração das avaliações a Casa de Avaliação e Formação (CAF) contou com a parceria de professores da Rede, responsáveis pela produção dos itens de prova.
+
+
+&nbsp; &nbsp;  Os resultados apresentados neste Relatório Geral são expressos em níveis progressivos, de acordo com o número de acertos na avaliação, o que pressupõe uma organização do menor para o maior desempenho (do Nível 1 ao Nível 5). As informações apuradas estão disponibilizadas na seguinte ordem:
+
+
+
+&nbsp; &nbsp;&nbsp; &nbsp;<span>&#10036;</span> Níveis de desempenho alcançados pelos estudantes avaliados;
+
+&nbsp; &nbsp;&nbsp; &nbsp;<span>&#10036;</span> Percentual de estudantes, por ano de escolaridade, em cada nível de desempenho;
+
+&nbsp; &nbsp;&nbsp; &nbsp;<span>&#10036;</span> Percentual de acerto dos estudantes por ano de escolaridade;
+
+&nbsp; &nbsp;&nbsp; &nbsp;<span>&#10036;</span> Distribuição dos níveis alcançados pelas escolas por bairro.
+
+<!-- Rendimento das escolas por ano de escolaridade e disciplina. 
+https://www.toptal.com/designers/htmlarrows/symbols/ -->
+
+ &nbsp; &nbsp;  Este Relatório estará disponível em ambiente virtual e será socializado com as equipes que atuam na Secretaria para discussão coletiva. Contamos com a parceria de todos para que os dados aqui apresentados sejam observados e propiciem ações que contribuam para a correção de rumos das estratégias pedagógicas adotadas na Rede de Niterói.
+
+
+## Taxa de Participação 
+
+&nbsp;  &nbsp; O gráfico abaixo apresenta um comparativo entre estudantes presentes e ausentes na Avaliação Diagnóstica 2022:
+
+```{r echo=FALSE, out.width='80%'}
+knitr::include_graphics('./images/plot.png')
+
+```
+
+&nbsp; &nbsp; Na sequência, apresenta-se uma tabela comparativa com todos os dados relacionados à presença e ausência dos estudantes:
+
+
+
+```{r echo=FALSE, layout="l-body-outset" ,  out.width='80%'}
+part <- readRDS("participacao.RDS")
+
+
+
+ reactable(
+  part,  
+  highlight = TRUE,
+    bordered = FALSE,
+  rowStyle = function(index) {
+    if (part[index, "Total de estudantes"] == 8321) {
+         list(background =  "rgb(194, 179, 41)")
+          }
+  },
+  defaultColDef = colDef(
+    align = "center" ,
+      headerStyle = list(background = "rgba(0, 0, 0, 0.01)")
+    ),
+  columns = list( 
+        `Percentual de participação` = colDef(
+        format = colFormat(percent = TRUE, digits = 2) ),
+         `Percentual de falta` = colDef(
+        format = colFormat(percent = TRUE, digits = 2) )
+   )
+)  %>%  add_source( font_size = 14, margin = margin(t = - 30, l= 25), "* Os números registrados na coluna `Estudantes` estão de acordo com as informações do Mapa Estatístico, encaminhado pela CIDAPE em 25/04/2022." ) 
+
+
+
+```
+
+
+## Níveis de Desempenho 
+
+&nbsp;  &nbsp;   Os níveis de desempenho foram estabelecidos de forma progressiva, considerando o quantitativo de acertos dos estudantes nas provas, conforme tabela a seguir:
+
+```{r , echo=FALSE, out.width='70%'}
+
+rendimento <- data.frame(
+  "MÉDIA DO RENDIMENTO" = c("0,0 a 2,9", "3,0 a 4,9" ,"5,0 a 6,9", "7,0 a 8,9" , "9,0 a 10,0"),
+  "NÍVEL DE PROFICIÊNCIA" = c("Nível 1" , "Nível 2" , "Nível 3", "Nível 4", "Nível 5")
+)
+
+colnames(rendimento)[1] <- "MÉDIA DO RENDIMENTO"
+colnames(rendimento)[2] <- "NÍVEL DE PROFICIÊNCIA"
+
+ reactable(
+  rendimento,  
+  highlight = TRUE,
+    bordered = FALSE,
+  rowStyle = function(index) {
+    if (rendimento[index, "NÍVEL DE PROFICIÊNCIA"] == "Nível 4") {
+         list(background =  "#F4792A") } else  
+    if (rendimento[index, "NÍVEL DE PROFICIÊNCIA"] == "Nível 5") {
+         list(background =  "#F4792A") }
+  },
+  defaultColDef = colDef(
+    align = "center" ,
+    headerStyle = list(background = "rgba(0, 0, 0, 0.01)")
+    )
+)  
+
+
+```
+
+ &nbsp;  &nbsp;  Cabe salientar que os resultados apresentados neste relatório consideram apenas os dados relacionados aos estudantes que realizaram a avaliação. 
+
+## Distribuição dos estudantes por ano de escolaridade em cada nível de desempenho 
+
+
+### Geral     
+
+&nbsp;  &nbsp;   A tabela abaixo apresenta o percentual de estudantes em cada um dos níveis de desempenho, de acordo com o ano de escolaridade:
+
+```{r , echo=FALSE, out.width='100%'}
+
+niveis <- readRDS("Niveis_Percent.RDS")
+
+orange_pal <- function(x) rgb(colorRamp(c("#ffe4cc", "#ff9500"))(x), maxColorValue = 255)
+orange <- function(x) rgb(colorRamp(c("#ffe4cc", "#ffe4cc"))(x), maxColorValue = 255)
+
+
+reactable(
+  niveis,
+  defaultColDef = colDef(
+    align = "center" ),
+  columns = list( 
+    `Nível 5` = colDef(style = function(value) {    
+            color <- if (value >= 0.30) { "#ff9500"  } else  {   "#FFFFFF" } 
+        list(background = color) }, 
+        format = colFormat(percent = TRUE, digits = 2) ),
+    `Nível 4` = colDef(style = function(value) {    
+            color <- if (value >= 0.30) {   "#ff9500"     } else  {    "#FFFFFF"  }
+        list(background = color) },
+        format = colFormat(percent = TRUE, digits = 2) ),
+     `Nível 3` = colDef(style = function(value) {    
+            color <- if (value >= 0.30) {  "#ff9500" } else  {  "#FFFFFF" } 
+            list(background = color) },
+        format = colFormat(percent = TRUE, digits = 2) ),
+      `Nível 2` = colDef(style = function(value) {    
+            color <- if (value >= 0.30) {   "#ff9500" } else  { "#FFFFFF" } 
+          list(background = color) },
+        format = colFormat(percent = TRUE, digits = 2) ),
+       `Nível 1` = colDef(style = function(value) {    
+            color <- if (value >= 0.30) { "#ff9500"  } else  {   "#FFFFFF" }
+            list(background = color) },
+        format = colFormat(percent = TRUE, digits = 2) )
+   )
+      , highlight = TRUE,
+    bordered = FALSE
+)
+
+
+# 
+# reactable(
+#   niveis,
+#   defaultColDef = colDef(
+#     align = "center"
+#   ),
+#   columns = list( 
+#     `Nível 5` = colDef(style = function(value) {    normalized <- (value - min(niveis$`Nível 5`)) / (max(niveis$`Nível 5`) - min(niveis$`Nível 5`))
+#              color <- orange_pal(normalized)
+#              list(background = color)
+#             },  format = colFormat(percent = TRUE, digits = 2) ),
+#     `Nível 4` = colDef(style = function(value) { normalized <- (value - min(niveis$`Nível 4`)) / (max(niveis$`Nível 4`) - min(niveis$`Nível 4`))
+#       color <- orange_pal(normalized)
+#       list(background = color)
+#     },   format = colFormat(percent = TRUE, digits = 2) ),
+#         `Nível 3` = colDef(style = function(value) { normalized <- (value - min(niveis$`Nível 3`)) / (max(niveis$`Nível 3`) - min(niveis$`Nível 3`))
+#       color <- orange(normalized)
+#       list(background = color)
+#     },   format = colFormat(percent = TRUE, digits = 2) ),
+#         `Nível 2` = colDef(style = function(value) { normalized <- (value - min(niveis$`Nível 2`)) / (max(niveis$`Nível 2`) - min(niveis$`Nível 2`))
+#       color <- orange(normalized)
+#       list(background = color)
+#     },   format = colFormat(percent = TRUE, digits = 2) ),
+#      `Nível 1` = colDef(style = function(value) { normalized <- (value - min(niveis$`Nível 1`)) / (max(niveis$`Nível 1`) - min(niveis$`Nível 1`))
+#       color <- orange(normalized)
+#       list(background = color)
+#     },   format = colFormat(percent = TRUE, digits = 2) )
+#   ), highlight = TRUE,
+#     bordered = FALSE
+# )
+
+
+
+
+
+
+
+```
+&nbsp;  &nbsp;   Os gráficos em coluna apresentam o número de estudantes em cada nível de desempenho, por ano de escolaridade:
+
+
+### 3º ano     
+
+
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+niveis_quant <- readRDS("Niveis_Quant.RDS")
+
+niveis_pivot <- niveis_quant %>% 
+  pivot_longer( !` `,  names_to = "Níveis", values_to = "Quantitativo")
+
+niveis_3 <- niveis_pivot %>% filter( ` ` == "3º ano")
+
+niveis_3$` ` <- NULL
+
+niveis_3 <- niveis_3[-6,]
+
+p<-ggplot(niveis_3, aes(x=Níveis, y=Quantitativo, color=Níveis)) +
+  geom_bar(stat="identity", fill="white")+ geom_text(aes(label=Quantitativo),   vjust=-0.2,  size=4)+ xlab(" ")
+p+scale_color_manual(values=c("#143A78", "#143A78", "#143A78", "#2E8B57", "#2E8B57"))+ theme(legend.position="none") 
+
+
+```
+
+### 4º ano  
+
+
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+
+niveis_4 <- niveis_pivot %>% filter( ` ` == "4º ano")
+
+niveis_4$` ` <- NULL
+
+niveis_4 <- niveis_4[-6,]
+
+p<-ggplot(niveis_4, aes(x=Níveis, y=Quantitativo, color=Níveis)) +
+  geom_bar(stat="identity", fill="white")+ geom_text(aes(label=Quantitativo),   vjust=-0.2,  size=4)+ xlab(" ")
+p+scale_color_manual(values=c("#143A78", "#143A78", "#143A78", "#2E8B57", "#2E8B57"))+ theme(legend.position="none") 
+
+
+```
+
+
+### 6º ano   
+
+
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+
+niveis_6 <- niveis_pivot %>% filter( ` ` == "6º ano")
+
+niveis_6$` ` <- NULL
+
+niveis_6 <- niveis_6[-6,]
+
+p<-ggplot(niveis_6, aes(x=Níveis, y=Quantitativo, color=Níveis)) +
+  geom_bar(stat="identity", fill="white")+ geom_text(aes(label=Quantitativo),   vjust=-0.2,  size=4)+ xlab(" ")
+p+scale_color_manual(values=c("#143A78", "#143A78", "#143A78", "#2E8B57", "#2E8B57"))+ theme(legend.position="none") 
+
+
+```
+
+### 8º ano
+
+ 
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+
+niveis_8 <- niveis_pivot %>% filter( ` ` == "8º ano")
+
+niveis_8$` ` <- NULL
+
+niveis_8 <- niveis_8[-6,]
+
+p<-ggplot(niveis_8, aes(x=Níveis, y=Quantitativo, color=Níveis)) +
+  geom_bar(stat="identity", fill="white")+ geom_text(aes(label=Quantitativo),   vjust=-0.2,  size=4)+ xlab(" ")
+p+scale_color_manual(values=c("#143A78", "#143A78", "#143A78", "#2E8B57", "#2E8B57"))+ theme(legend.position="none") 
+
+
+```
+
+
+## Percentual de acertos por questão, ano de escolaridade e disciplina
+
+&nbsp;  &nbsp;    A análise proposta na sequência se refere aos percentuais de acertos dos estudantes em cada questão de prova, por ano de escolaridade e disciplina. Espera-se que tais gráficos permitam uma análise macro dos itens relacionados às provas:
+
+
+
+
+### 3º ano
+
+
+```{r , echo=FALSE,  out.width = "95%", out.height= "95%"}
+
+
+acertos <-  readRDS("acertos_3.RDS")
+
+acertos_P <- acertos[-c(11:20),]
+
+# Reorder following the value of another column:
+p1<- acertos_P  %>%
+  ggplot( aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=1.0,  size=3.5)+
+  ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+ 
+
+acertos_M <- acertos[-c(1:10),]
+
+# Reverse side
+p2 <- acertos_M  %>%
+  ggplot(aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=1.0,  size=3.5)+
+  ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+
+grid.arrange(p1, p2, ncol = 2)
+
+
+```
+
+</br>
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/EVUkP0zQtC5LglZ_YiBlfbgBkRQLb1oIxGVdccYU6d63iw?e=5QclCH" target="_blank">Clique para fazer o download da prova de Língua Portuguesa  </a> 
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/EdGllpuQ9OlOr6wGslDRoOgBAwv6D8Nxl-YRK8XK0or5ww?e=Het75E" target="_blank"> Clique para fazer o download da prova de Matemática </a> 
+
+
+### 4º ano
+
+
+
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+
+acertos <-  readRDS("acertos_4.RDS")
+
+acertos_P <- acertos[-c(11:20),]
+
+# Reorder following the value of another column:
+p1<- acertos_P  %>%
+  ggplot( aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=0,  size=3.5)+
+    ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+
+
+acertos_M <- acertos[-c(1:10),]
+
+# Reverse side
+p2 <- acertos_M  %>%
+  ggplot(aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=0,  size=3.5)+
+    ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+
+grid.arrange(p1, p2, ncol = 2)
+
+
+```
+
+
+</br>
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/EVuLAJ5jUPZJo1yRdMdB8I4BUn1LTiwT8A_riW3unYA0eA?e=h0CA6U" target="_blank">Clique para fazer o download da prova de Língua Portuguesa  </a> 
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/EfJSxHVt-iZHtwZ8rl0G_O4Bd477SEaCoG9hnzGuvb7TAQ?e=aB2Kgm" target="_blank"> Clique para fazer o download da prova de Matemática </a> 
+
+
+
+### 6º ano
+
+
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+
+acertos <-  readRDS("acertos_6.RDS")
+
+acertos_P <- acertos[-c(11:20),]
+
+# Reorder following the value of another column:
+p1<- acertos_P  %>%
+  ggplot( aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=1,  size=3.5)+
+    ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+ 
+
+acertos_M <- acertos[-c(1:10),]
+
+# Reverse side
+p2 <- acertos_M  %>%
+  ggplot(aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=1,  size=3.5)+
+    ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+
+grid.arrange(p1, p2, ncol = 2)
+
+
+```
+
+</br>
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/EaamshmmWVBBlRJdf5W2czcB6h0NxJZmv_gc_ESLQ9eyZA?e=W6ib9V" target="_blank">Clique para fazer o download da prova de Língua Portuguesa  </a> 
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/Ee-dNHpuU3pBhF_vx7NLRagB42HOp6ZI8BqGotIKBYqIVQ?e=py711N" target="_blank"> Clique para fazer o download da prova de Matemática </a> 
+
+
+### 8º ano
+
+
+
+```{r , echo=FALSE, out.width = "95%", out.height= "95%"}
+
+
+acertos <-  readRDS("acertos_8.RDS")
+
+acertos_P <- acertos[-c(11:20),]
+
+# Reorder following the value of another column:
+p1<- acertos_P  %>%
+  ggplot( aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=0,  size=3.5)+
+    ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+ 
+
+acertos_M <- acertos[-c(1:10),]
+
+# Reverse side
+p2 <- acertos_M  %>%
+  ggplot(aes(x=fct_inorder(Questões), y=`Percentual de Acerto`)) +
+    geom_bar(stat="identity", fill="#F4792A", alpha=.6, width=.4) +
+   geom_text(aes(label=`Percentual de Acerto`),   hjust=0,  size=3.5)+
+    ylim(0,1.0)+
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+
+grid.arrange(p1, p2, ncol = 2)
+
+
+```
+
+</br>
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/ETlcfHu8bgZCgvjUiBMw1EMBxOCNSUrkzSeFWaOekLu0_g?e=mdaAIA" target="_blank">Clique para fazer o download da prova de Língua Portuguesa  </a> 
+
+<a href="https://fmeniteroi-my.sharepoint.com/:b:/g/personal/caf_educacao_niteroi_rj_gov_br/Ed-a6bbAH09IpdFB9Cngy1sBMPihvhF9hTRUxNt6pjRAag?e=bFaAZs" target="_blank"> Clique para fazer o download da prova de Matemática </a> 
+
+<!-- ## Rendimento das escolas por ano de escolaridade e disciplina  -->
+
+<!-- As tabelas a seguir apresentam a média geral alcançada pelos estudantes em cada ano de escolaridade, por escola, bem como as médias alcançadas em cada disciplina. -->
+
+
+<!-- ### 3º ano      -->
+
+
+<!-- ```{r , echo=FALSE, out.width='100%' } -->
+
+<!-- result <-  readRDS("Resultado_escola_3.RDS") -->
+
+
+<!-- reactable( -->
+<!--   result, -->
+<!--   defaultColDef = colDef( -->
+<!--     align = "center" ), -->
+<!--   columns = list(  -->
+<!--     `Média Geral` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) { "#ff9500"  } else  {   "#FFFFFF" }  -->
+<!--         list(background = color) } , width = 120), -->
+<!--     `Média Português` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {   "#ff9500"     } else  {    "#FFFFFF"  } -->
+<!--         list(background = color) } , width = 120), -->
+<!--      `Média Matemática` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {  "#ff9500" } else  {  "#FFFFFF" }  -->
+<!--             list(background = color) } , width = 120) -->
+<!--    ) -->
+<!--       , highlight = TRUE, -->
+<!--     bordered = FALSE -->
+<!-- ) -->
+
+<!-- ``` -->
+
+<!-- ### 4º ano   -->
+
+<!-- ```{r , echo=FALSE, out.width='100%'} -->
+
+<!-- result <-  readRDS("Resultado_escola_4.RDS") -->
+
+
+<!-- reactable( -->
+<!--   result, -->
+<!--   defaultColDef = colDef( -->
+<!--     align = "center" ), -->
+<!--   columns = list(  -->
+<!--     `Média Geral` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) { "#ff9500"  } else  {   "#FFFFFF" }  -->
+<!--         list(background = color) } , width = 120), -->
+<!--     `Média Português` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {   "#ff9500"     } else  {    "#FFFFFF"  } -->
+<!--         list(background = color) } , width = 120), -->
+<!--      `Média Matemática` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {  "#ff9500" } else  {  "#FFFFFF" }  -->
+<!--             list(background = color) } , width = 120) -->
+<!--    ) -->
+<!--       , highlight = TRUE, -->
+<!--     bordered = FALSE -->
+<!-- ) -->
+
+<!-- ``` -->
+
+<!-- ### 6º ano    -->
+
+
+<!-- ```{r , echo=FALSE, out.width='100%'} -->
+
+<!-- result <-  readRDS("Resultado_escola_6.RDS") -->
+
+
+<!-- reactable( -->
+<!--   result, -->
+<!--   defaultColDef = colDef( -->
+<!--     align = "center" ), -->
+<!--   columns = list(  -->
+<!--     `Média Geral` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) { "#ff9500"  } else  {   "#FFFFFF" }  -->
+<!--         list(background = color) } , width = 120), -->
+<!--     `Média Português` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {   "#ff9500"     } else  {    "#FFFFFF"  } -->
+<!--         list(background = color) } , width = 120), -->
+<!--      `Média Matemática` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {  "#ff9500" } else  {  "#FFFFFF" }  -->
+<!--             list(background = color) } , width = 120) -->
+<!--    ) -->
+<!--       , highlight = TRUE, -->
+<!--     bordered = FALSE -->
+<!-- ) -->
+
+<!-- ``` -->
+
+
+<!-- ### 8º ano -->
+
+
+<!-- ```{r , echo=FALSE, out.width='100%'} -->
+
+<!-- result <-  readRDS("Resultado_escola_8.RDS") -->
+
+
+<!-- reactable( -->
+<!--   result, -->
+<!--   defaultColDef = colDef( -->
+<!--     align = "center" ), -->
+<!--   columns = list(  -->
+<!--     `Média Geral` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) { "#ff9500"  } else  {   "#FFFFFF" }  -->
+<!--         list(background = color) } , width = 120), -->
+<!--     `Média Português` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {   "#ff9500"     } else  {    "#FFFFFF"  } -->
+<!--         list(background = color) } , width = 120), -->
+<!--      `Média Matemática` = colDef(style = function(value) {     -->
+<!--             color <- if (value >= 9.0) {  "#ff9500" } else  {  "#FFFFFF" }  -->
+<!--             list(background = color) } , width = 120) -->
+<!--    ) -->
+<!--       , highlight = TRUE, -->
+<!--     bordered = FALSE -->
+<!-- ) -->
+
+<!-- ``` -->
+
+
+## Distribuição dos níveis alcançados pelas escolas por bairro
+
+
+
+### 3º ano 
+````{r, fig.align='center', out.width="100%"}
+
+mapa <- readRDS( "bairros_e_regioes_escola_3.RDS") 
+
+Resultados_escola_group <- mapa %>% 
+  group_by( `BAIRRO DA ESCOLA`) %>% 
+  summarise( Média = mean( `Média Geral`), lat = mean( lat), long = mean(long), escolas_avaliadas = n() ) 
+
+
+Resultados_escola_group$Média <- round(Resultados_escola_group$Média,2)
+
+
+Resultados_escola_group$label <- with(Resultados_escola_group, paste( `BAIRRO DA ESCOLA`, "    Média:", Média))
+
+getColor <- function(Resultados_escola_group) {
+  sapply(Resultados_escola_group$Média, function(Média) {
+  if(Média <= 3) {
+    "red"
+  } else if(Média < 5) {
+    "orange"
+  } else if(Média < 7) {
+    "pink"
+  }  else if(Média < 9) {
+    "blue"
+  }else if(Média < 10.1) {
+    "darkgreen"
+  }}) }
+    
+   
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = getColor(Resultados_escola_group),
+  library = 'ion',
+  markerColor = getColor(Resultados_escola_group)
+)
+
+leaflet(Resultados_escola_group) %>% addTiles() %>%
+  addAwesomeMarkers(~long, ~lat, icon=icons, label = ~as.character(label))%>%
+  addLegend("bottomright", colors= c("red", "orange", "pink","blue", "darkgreen"), labels=c("Nível 1", "Nível 2", "Nível 3", "Nível 4", "Nível 5")) 
+
+```
+
+
+
+### 4º ano 
+````{r, fig.align='center', out.width="100%"}
+
+mapa <- readRDS( "bairros_e_regioes_escola_4.RDS") 
+
+Resultados_escola_group <- mapa %>% 
+  group_by( `BAIRRO DA ESCOLA`) %>% 
+  summarise( Média = mean( `Média Geral`), lat = mean( lat), long = mean(long), escolas_avaliadas = n() ) 
+
+
+Resultados_escola_group$Média <- round(Resultados_escola_group$Média,2)
+
+
+Resultados_escola_group$label <- with(Resultados_escola_group, paste( `BAIRRO DA ESCOLA`, "    Média:", Média))
+
+getColor <- function(Resultados_escola_group) {
+  sapply(Resultados_escola_group$Média, function(Média) {
+  if(Média <= 3) {
+    "red"
+  } else if(Média < 5) {
+    "orange"
+  } else if(Média < 7) {
+    "pink"
+  }  else if(Média < 9) {
+    "blue"
+  }else if(Média < 10.1) {
+    "darkgreen"
+  }}) }
+    
+   
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = getColor(Resultados_escola_group),
+  library = 'ion',
+  markerColor = getColor(Resultados_escola_group)
+)
+
+leaflet(Resultados_escola_group) %>% addTiles() %>%
+  addAwesomeMarkers(~long, ~lat, icon=icons, label = ~as.character(label))%>%
+  addLegend("bottomright", colors= c("red", "orange", "pink","blue", "darkgreen"), labels=c("Nível 1", "Nível 2", "Nível 3", "Nível 4", "Nível 5")) 
+
+```
+
+
+
+
+### 6º ano 
+````{r, fig.align='center', out.width="100%"}
+
+mapa <- readRDS( "bairros_e_regioes_escola_6.RDS") 
+
+Resultados_escola_group <- mapa %>% 
+  group_by( `BAIRRO DA ESCOLA`) %>% 
+  summarise( Média = mean( `Média Geral`), lat = mean( lat), long = mean(long), escolas_avaliadas = n() ) 
+
+
+Resultados_escola_group$Média <- round(Resultados_escola_group$Média,2)
+
+
+Resultados_escola_group$label <- with(Resultados_escola_group, paste( `BAIRRO DA ESCOLA`, "    Média:", Média))
+
+getColor <- function(Resultados_escola_group) {
+  sapply(Resultados_escola_group$Média, function(Média) {
+  if(Média <= 3) {
+    "red"
+  } else if(Média < 5) {
+    "orange"
+  } else if(Média < 7) {
+    "pink"
+  }  else if(Média < 9) {
+    "blue"
+  }else if(Média < 10.1) {
+    "darkgreen"
+  }}) }
+    
+   
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = getColor(Resultados_escola_group),
+  library = 'ion',
+  markerColor = getColor(Resultados_escola_group)
+)
+
+leaflet(Resultados_escola_group) %>% addTiles() %>%
+  addAwesomeMarkers(~long, ~lat, icon=icons, label = ~as.character(label))%>%
+  addLegend("bottomright", colors= c("red", "orange", "pink","blue", "darkgreen"), labels=c("Nível 1", "Nível 2", "Nível 3", "Nível 4", "Nível 5")) 
+
+```
+
+
+
+### 8º ano 
+````{r, fig.align='center', out.width="100%"}
+
+mapa <- readRDS( "bairros_e_regioes_escola_8.RDS") 
+
+Resultados_escola_group <- mapa %>% 
+  group_by( `BAIRRO DA ESCOLA`) %>% 
+  summarise( Média = mean( `Média Geral`), lat = mean( lat), long = mean(long), escolas_avaliadas = n() ) 
+
+
+Resultados_escola_group$Média <- round(Resultados_escola_group$Média,2)
+
+
+Resultados_escola_group$label <- with(Resultados_escola_group, paste( `BAIRRO DA ESCOLA`, "    Média:", Média))
+
+getColor <- function(Resultados_escola_group) {
+  sapply(Resultados_escola_group$Média, function(Média) {
+  if(Média <= 3) {
+    "red"
+  } else if(Média < 5) {
+    "orange"
+  } else if(Média < 7) {
+    "pink"
+  }  else if(Média < 9) {
+    "blue"
+  }else if(Média < 10.1) {
+    "darkgreen"
+  }}) }
+    
+   
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = getColor(Resultados_escola_group),
+  library = 'ion',
+  markerColor = getColor(Resultados_escola_group)
+)
+
+leaflet(Resultados_escola_group) %>% addTiles() %>%
+  addAwesomeMarkers(~long, ~lat, icon=icons, label = ~as.character(label))%>%
+  addLegend("bottomright", colors= c("red", "orange", "pink","blue", "darkgreen"), labels=c("Nível 1", "Nível 2", "Nível 3", "Nível 4", "Nível 5")) 
+
+```
