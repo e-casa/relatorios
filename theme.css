@@ -734,6 +734,149 @@ video {
   width:      100%;
 }
 
+@-webkit-keyframes spin{
+  to{
+    transform:      rotate(360deg);
+  }
+}
+
+@keyframes spin{
+  to{
+    transform:      rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping{
+  75%, 100%{
+    transform:      scale(2);
+    opacity:      0;
+  }
+}
+
+@keyframes ping{
+  75%, 100%{
+    transform:      scale(2);
+    opacity:      0;
+  }
+}
+
+@-webkit-keyframes pulse{
+  50%{
+    opacity:      .5;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    opacity:      .5;
+  }
+}
+
+@-webkit-keyframes bounce{
+  0%, 100%{
+    transform:      translateY(-25%);
+    -webkit-animation-timing-function:      cubic-bezier(0.8,0,1,1);
+            animation-timing-function:      cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    transform:      none;
+    -webkit-animation-timing-function:      cubic-bezier(0,0,0.2,1);
+            animation-timing-function:      cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce{
+  0%, 100%{
+    transform:      translateY(-25%);
+    -webkit-animation-timing-function:      cubic-bezier(0.8,0,1,1);
+            animation-timing-function:      cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    transform:      none;
+    -webkit-animation-timing-function:      cubic-bezier(0,0,0.2,1);
+            animation-timing-function:      cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@media (min-width: 640px){
+  .sm\:grid{
+    display:      grid;
+  }
+
+  .sm\:gap-4{
+    gap:      1rem;
+  }
+
+  .sm\:gap-16{
+    gap:      4rem;
+  }
+
+  .sm\:grid-cols-2{
+    grid-template-columns:      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .md\:gap-8{
+    gap:      2rem;
+  }
+}
+
+@media (min-width: 1024px){
+}
+
+@media (min-width: 1280px){
+  .xl\:grid{
+    display:      grid;
+  }
+
+  .xl\:mx-64{
+    margin-left:      16rem;
+    margin-right:      16rem;
+  }
+
+  .xl\:mb-16{
+    margin-bottom:      4rem;
+  }
+
+  .xl\:gap-16{
+    gap:      4rem;
+  }
+
+  .xl\:grid-cols-3{
+    grid-template-columns:      repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-4{
+    grid-template-columns:      repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-5{
+    grid-template-columns:      repeat(5, minmax(0, 1fr));
+  }
+
+  .xl\:col-span-1{
+    grid-column:      span 1 / span 1;
+  }
+
+  .xl\:col-span-2{
+    grid-column:      span 2 / span 2;
+  }
+}
+
+@media (min-width: 1536px){
+}
+
+.full-width {
+  width: 100vw;
+  vertical-align: middle;
+  height: auto;
+margin-left: calc(50% - 50vw);
+font-family:  'Oswald', sans-serif
+}
+
 
 .cabecalho {
   font-size: 40px;
