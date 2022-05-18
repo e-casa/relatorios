@@ -35,6 +35,7 @@ html {
   --navbar-font:     'Oswald', sans-serif;  /* websites + blogs only */
 }
 
+
 /*-- ARTICLE METADATA --*/
 
 d-byline {
@@ -70,7 +71,7 @@ d-appendix {
   --text-size:        18px;
   --hover-color:      #AD1D32;
   --bkgd-color:       #ffffff;
-   height: 60px;
+   height: 80px;
 }
 
 .distill-site-footer {
@@ -97,7 +98,7 @@ d-title {
 .distill-site-header .logo img {
     display: inline-block;
     width: 80px;
-    height: 80px;
+    height: 73px;
     max-height: 80px;
 }
 
@@ -765,8 +766,8 @@ object {
   }
 
   .xl\:mx-64{
-    margin-left:      0;
-    margin-right:      0;
+    margin-left:      16rem;
+    margin-right:      16rem;
   }
 
   .xl\:mb-16{
@@ -802,11 +803,9 @@ object {
 }
 
 .full-width {
-  max-width: 1600px !important;
+  max-width: 100% !important;
   vertical-align: middle;
   height: auto;
-    margin-left: 0;
-  margin-right: 0;
 font-family:  'Oswald', sans-serif
 }
 
@@ -825,5 +824,6 @@ font-family:  'Oswald', sans-serif
   text-align:center;
 font-family:  'Oswald', sans-serif
 }
+
 
 
