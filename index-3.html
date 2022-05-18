@@ -2148,6 +2148,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --navbar-font:     'Oswald', sans-serif;  /* websites + blogs only */
   }
 
+
   /*-- ARTICLE METADATA --*/
 
   d-byline {
@@ -2183,7 +2184,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-size:        18px;
     --hover-color:      #AD1D32;
     --bkgd-color:       #ffffff;
-     height: 60px;
+     height: 80px;
   }
 
   .distill-site-footer {
@@ -2197,6 +2198,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /* Add any additional CSS rules below                      */
 
+  d-title {
+      visibility: hidden;
+      height: 0px;
+    }
+
+
   .distill-site-header .d-title {
     display: none;
   }
@@ -2204,7 +2211,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .distill-site-header .logo img {
       display: inline-block;
       width: 80px;
-      height: 80px;
+      height: 73px;
       max-height: 80px;
   }
 
@@ -2220,8 +2227,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   .headroom {
-    top: 0px;
+    top: 10px;
   }
+
 
   d-title{
     margin-top: 0px;
@@ -2253,12 +2261,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     box-sizing: border-box;
   }
 
+  /**
+  Use a more readable tab size (opinionated).
+  */
 
+  :root {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  }
 
   /**
   1. Correct the line height in all browsers.
   2. Prevent adjustments of font size after orientation changes in iOS.
   */
+
+  html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
 
   /*
   Sections
@@ -2270,7 +2291,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   */
 
   body {
-   margin: auto;
+   margin: 0;
   }
 
   /**
@@ -2732,80 +2753,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
    * https://github.com/mozdevs/cssremedy/issues/14
    */
 
-  img,
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .rounded-md{
-    border-radius:      0.375rem;
-  }
-
-  .inline{
-    display:      inline;
-  }
-
-  .table{
-    display:      table;
-  }
-
-  .items-center{
-    align-items:      center;
-  }
-
-  .font-bold{
-    font-weight:      700;
-  }
-
-  .h-full{
-    height:      100%;
-  }
-
-  .text-4xl{
-    font-size:      2.25rem;
-    line-height:      2.5rem;
-  }
-
-  .my-16{
-    margin-top:      4rem;
-    margin-bottom:      4rem;
-  }
-
-  .mx-auto{
-    margin-left:      auto;
-    margin-right:      auto;
-  }
-
-  .mb-4{
-    margin-bottom:      1rem;
-  }
-
-  .mt-16{
-    margin-top:      4rem;
-  }
-
-  .mb-16{
-    margin-bottom:      4rem;
-  }
-
-  .mt-24{
-    margin-top:      6rem;
-  }
-
-  .py-4{
-    padding-top:      1rem;
-    padding-bottom:      1rem;
-  }
-
-  .pr-2{
-    padding-right:      0.5rem;
-  }
-
-  *{
-    --tw-shadow:      0 0 #0000;
-  }
-
   .shadow-md{
     --tw-shadow:      0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     box-shadow:      var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2969,28 +2916,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   .full-width {
-    width: 100vw;
+    max-width: 100% !important;
     vertical-align: middle;
     height: auto;
-  margin-left: calc(50% - 50vw);
   font-family:  'Oswald', sans-serif
   }
 
 
   .cabecalho {
     font-size: 40px;
-    width: 100vw;
     height: auto;
-  margin-left: calc(50% - 50vw);
+    text-align:center;
   font-family:  'Oswald', sans-serif
   }
 
 
   .cabecalho2 {
     font-size: 30px;
-    width: 100vw;
     height: auto;
-  margin-left: calc(50% - 50vw);
+    text-align:center;
   font-family:  'Oswald', sans-serif
   }
 
@@ -3272,9 +3216,9 @@ ano presentes e ausentes na Avaliação Diagnóstica 2022:</p>
 <p>    Na sequência, apresenta-se uma tabela comparativa com todos os
 dados relacionados à presença e ausência dos estudantes:</p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="htmlwidget-dc2b2ce4f4d68872dc40" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<div id="htmlwidget-e82663d3fb23c01a69e8" class="reactable html-widget" style="width:auto;height:auto;"></div>
 <p style="color:#000;background:#FFFFFF;text-align:left;font-size:14px;font-style:normal;font-weight:normal;text-decoration:;letter-spacing:px;word-spacing:px;text-transform:;text-shadow:;margin-top:-30px;margin-right:0px;margin-bottom:0px;margin-left:25px">* Os números registrados na coluna `Estudantes` estão de acordo com as informações do Mapa Estatístico, encaminhado pela CIDAPE em 25/04/2022.</p>
-<script type="application/json" data-for="htmlwidget-dc2b2ce4f4d68872dc40">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Ano de escolaridade":["3º ano"],"Total de estudantes":[3002],"Estudantes que realizaram a prova":[2302],"Estudantes que não realizaram a prova":[700],"Percentual de participação":[0.766822118587608],"Percentual de falta":[0.233177881412392]},"columns":[{"accessor":"Ano de escolaridade","name":"Ano de escolaridade","type":"character","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Total de estudantes","name":"Total de estudantes","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Estudantes que realizaram a prova","name":"Estudantes que realizaram a prova","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Estudantes que não realizaram a prova","name":"Estudantes que não realizaram a prova","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Percentual de participação","name":"Percentual de participação","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"},"format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}}},{"accessor":"Percentual de falta","name":"Percentual de falta","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"},"format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}}}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"rowStyle":[null],"dataKey":"2d2758a7fd2f0d6b7941c812b96c86af","key":"2d2758a7fd2f0d6b7941c812b96c86af"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-e82663d3fb23c01a69e8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Ano de escolaridade":["3º ano"],"Total de estudantes":[3002],"Estudantes que realizaram a prova":[2302],"Estudantes que não realizaram a prova":[700],"Percentual de participação":[0.766822118587608],"Percentual de falta":[0.233177881412392]},"columns":[{"accessor":"Ano de escolaridade","name":"Ano de escolaridade","type":"character","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Total de estudantes","name":"Total de estudantes","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Estudantes que realizaram a prova","name":"Estudantes que realizaram a prova","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Estudantes que não realizaram a prova","name":"Estudantes que não realizaram a prova","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"}},{"accessor":"Percentual de participação","name":"Percentual de participação","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"},"format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}}},{"accessor":"Percentual de falta","name":"Percentual de falta","type":"numeric","align":"center","headerStyle":{"background":"rgba(0, 0, 0, 0.01)"},"format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}}}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"rowStyle":[null],"dataKey":"2d2758a7fd2f0d6b7941c812b96c86af","key":"2d2758a7fd2f0d6b7941c812b96c86af"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <h2
 id="distribuição-dos-estudantes-em-cada-nível-de-desempenho">Distribuição
@@ -3282,8 +3226,8 @@ dos estudantes em cada nível de desempenho</h2>
 <p>    A tabela abaixo apresenta o percentual de estudantes em cada um
 dos níveis de desempenho, de acordo com o ano de escolaridade:</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-360af751e15658f02f1c" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-360af751e15658f02f1c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{" ":["3º ano"],"Nível 1":[0.0169417897480452],"Nível 2":[0.0655951346655083],"Nível 3":[0.196785403996525],"Nível 4":[0.38010425716768],"Nível 5":[0.340573414422242]},"columns":[{"accessor":" ","name":" ","type":"character","align":"center"},{"accessor":"Nível 1","name":"Nível 1","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFFFFF"}]},{"accessor":"Nível 2","name":"Nível 2","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFFFFF"}]},{"accessor":"Nível 3","name":"Nível 3","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFFFFF"}]},{"accessor":"Nível 4","name":"Nível 4","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#ff9500"}]},{"accessor":"Nível 5","name":"Nível 5","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#ff9500"}]}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"dataKey":"929391f3eaf8d6ff4ee661113c2ffd95","key":"929391f3eaf8d6ff4ee661113c2ffd95"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-186e0507680b5dae2cb9" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-186e0507680b5dae2cb9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{" ":["3º ano"],"Nível 1":[0.0169417897480452],"Nível 2":[0.0655951346655083],"Nível 3":[0.196785403996525],"Nível 4":[0.38010425716768],"Nível 5":[0.340573414422242]},"columns":[{"accessor":" ","name":" ","type":"character","align":"center"},{"accessor":"Nível 1","name":"Nível 1","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFFFFF"}]},{"accessor":"Nível 2","name":"Nível 2","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFFFFF"}]},{"accessor":"Nível 3","name":"Nível 3","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#FFFFFF"}]},{"accessor":"Nível 4","name":"Nível 4","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#ff9500"}]},{"accessor":"Nível 5","name":"Nível 5","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"style":[{"background":"#ff9500"}]}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"dataKey":"929391f3eaf8d6ff4ee661113c2ffd95","key":"929391f3eaf8d6ff4ee661113c2ffd95"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <h2 id="percentual-de-acertos-por-descritor-no-3º-ano">Percentual de
 acertos por descritor no 3º ano</h2>
@@ -3292,13 +3236,13 @@ acertos dos estudantes em cada descritor da prova. Espera-se que tais
 resultados permitam uma análise dos conteúdos a abordados:</p>
 <h3 id="língua-portuguesa">Língua Portuguesa</h3>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-d410af3b3d8cbe0720c0" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d410af3b3d8cbe0720c0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Questões":["LP1","LP2","LP3","LP4","LP5","LP6","LP7","LP8","LP9","LP10"],"Cod. Descritor":["D5","D3","D9","D8","D1","D2","D4","D7","D6","D10"],"Descritor":["Identificar a escrita de uma palavra ilustrada, sem que isso seja possível apenas com o reconhecimento da sílaba inicial. ","Identificar a finalidade do texto com base no suporte ou nas características gráficas do mesmo. ","Diferenciar letras de outros sinais gráficos. ","Inferir informações a partir de elementos implícitos em um texto. ","Identificar a relação fonema/grafema com correspondência sonora única. ","Ler uma frase associando-a corretamente à uma imagem. ","Identificar o número de sílabas que formam uma palavra. ","Inferir sentido a partir de elementos de um texto não-verbal. ","Reconhecer um assunto de um texto fundamentando-se na leitura individual do mesmo. ","Inferir informações a partir de elementos de implícitos em um texto."],"Percentual de Acerto":[0.8123370981755,0.663336229365769,0.934404865334492,0.705473501303215,0.896177237185056,0.80364900086881,0.772371850564726,0.832754126846221,0.618592528236316,0.532580364900087]},"columns":[{"accessor":"Questões","name":"Questões","type":"character","align":"center","width":90},{"accessor":"Cod. Descritor","name":"Cod. Descritor","type":"character","align":"center","width":90},{"accessor":"Descritor","name":"Descritor","type":"character","align":"center"},{"accessor":"Percentual de Acerto","name":"Percentual de Acerto","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"width":100}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"49d568ede00115313cf1222f160fbf92","key":"49d568ede00115313cf1222f160fbf92"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-db83ba0ee6394690a2ed" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-db83ba0ee6394690a2ed">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Questões":["LP1","LP2","LP3","LP4","LP5","LP6","LP7","LP8","LP9","LP10"],"Cod. Descritor":["D5","D3","D9","D8","D1","D2","D4","D7","D6","D10"],"Descritor":["Identificar a escrita de uma palavra ilustrada, sem que isso seja possível apenas com o reconhecimento da sílaba inicial. ","Identificar a finalidade do texto com base no suporte ou nas características gráficas do mesmo. ","Diferenciar letras de outros sinais gráficos. ","Inferir informações a partir de elementos implícitos em um texto. ","Identificar a relação fonema/grafema com correspondência sonora única. ","Ler uma frase associando-a corretamente à uma imagem. ","Identificar o número de sílabas que formam uma palavra. ","Inferir sentido a partir de elementos de um texto não-verbal. ","Reconhecer um assunto de um texto fundamentando-se na leitura individual do mesmo. ","Inferir informações a partir de elementos de implícitos em um texto."],"Percentual de Acerto":[0.8123370981755,0.663336229365769,0.934404865334492,0.705473501303215,0.896177237185056,0.80364900086881,0.772371850564726,0.832754126846221,0.618592528236316,0.532580364900087]},"columns":[{"accessor":"Questões","name":"Questões","type":"character","align":"center","width":90},{"accessor":"Cod. Descritor","name":"Cod. Descritor","type":"character","align":"center","width":90},{"accessor":"Descritor","name":"Descritor","type":"character","align":"center"},{"accessor":"Percentual de Acerto","name":"Percentual de Acerto","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"width":100}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"49d568ede00115313cf1222f160fbf92","key":"49d568ede00115313cf1222f160fbf92"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <h3 id="matemática">Matemática</h3>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-6af9abf53c1e017ae7ac" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6af9abf53c1e017ae7ac">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Questões":["M1","M2","M3","M4","M5","M6","M7","M8","M9","M10"],"Cod. Descritor":["D19","D11","D17","D18","D14","D20","D21","D12","D15","D23"],"Descritor":["Associar um número à sua respectiva representação simbólica. ","Associar a contagem de coleções de objetos à representação numérica de suas respectivas quantidades.","Ordenar números naturais.","Resolver problema que demanda a ação de juntar.","Identificar figuras geométricas planas.","Identificar informações em tabelas simples."," Identificar a localização de pessoas ou objetos no espaço segundo um dado ponto de referência.","Comparar comprimentos. ","Comparar números naturais.","Calcular o resultado de operação de subtração de números naturais. "],"Percentual de Acerto":[0.886185925282363,0.937445699391833,0.665073848827107,0.669852302345786,0.634231103388358,0.879235447437011,0.836663770634231,0.978279756733275,0.721112076455256,0.573414422241529]},"columns":[{"accessor":"Questões","name":"Questões","type":"character","align":"center","width":90},{"accessor":"Cod. Descritor","name":"Cod. Descritor","type":"character","align":"center","width":90},{"accessor":"Descritor","name":"Descritor","type":"character","align":"center"},{"accessor":"Percentual de Acerto","name":"Percentual de Acerto","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"width":100}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"d82ebc62bb827479786c460dc0c47214","key":"d82ebc62bb827479786c460dc0c47214"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-50586881ac8c5cc3c8ba" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-50586881ac8c5cc3c8ba">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Questões":["M1","M2","M3","M4","M5","M6","M7","M8","M9","M10"],"Cod. Descritor":["D19","D11","D17","D18","D14","D20","D21","D12","D15","D23"],"Descritor":["Associar um número à sua respectiva representação simbólica. ","Associar a contagem de coleções de objetos à representação numérica de suas respectivas quantidades.","Ordenar números naturais.","Resolver problema que demanda a ação de juntar.","Identificar figuras geométricas planas.","Identificar informações em tabelas simples."," Identificar a localização de pessoas ou objetos no espaço segundo um dado ponto de referência.","Comparar comprimentos. ","Comparar números naturais.","Calcular o resultado de operação de subtração de números naturais. "],"Percentual de Acerto":[0.886185925282363,0.937445699391833,0.665073848827107,0.669852302345786,0.634231103388358,0.879235447437011,0.836663770634231,0.978279756733275,0.721112076455256,0.573414422241529]},"columns":[{"accessor":"Questões","name":"Questões","type":"character","align":"center","width":90},{"accessor":"Cod. Descritor","name":"Cod. Descritor","type":"character","align":"center","width":90},{"accessor":"Descritor","name":"Descritor","type":"character","align":"center"},{"accessor":"Percentual de Acerto","name":"Percentual de Acerto","type":"numeric","align":"center","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"width":100}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"d82ebc62bb827479786c460dc0c47214","key":"d82ebc62bb827479786c460dc0c47214"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <p></br></p>
 <h2 id="análise-das-questões">Análise das Questões</h2>
@@ -3315,8 +3259,8 @@ Portuguesa</h3>
 ilustrada, sem que isso seja possível apenas com o reconhecimento da
 sílaba inicial.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-4fbbe6cf558b97ce4c88" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-4fbbe6cf558b97ce4c88">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0860121633362294],"%B":[0.053866203301477],"%C":[0.8123370981755],"%D":[0.0299739357080799],"%NA":[0.0178105994787142]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"afb9677d4941279be9adf423943aa2ee","key":"afb9677d4941279be9adf423943aa2ee"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0a6ccff715c95d45c00a" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0a6ccff715c95d45c00a">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0860121633362294],"%B":[0.053866203301477],"%C":[0.8123370981755],"%D":[0.0299739357080799],"%NA":[0.0178105994787142]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"afb9677d4941279be9adf423943aa2ee","key":"afb9677d4941279be9adf423943aa2ee"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P2.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3324,8 +3268,8 @@ sílaba inicial.</p>
 <p><strong>Descritor:</strong> Identificar a finalidade do texto com
 base no suporte ou nas características gráficas do mesmo.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-18a96c4a5af99d95e7ed" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-18a96c4a5af99d95e7ed">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.104691572545613],"%B":[0.663336229365769],"%C":[0.0829713292788879],"%D":[0.115986099044309],"%NA":[0.0330147697654214]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"6228f3aede548d4a33eb8bf1617d0567","key":"6228f3aede548d4a33eb8bf1617d0567"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-51b01078c2ece2b2be8e" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-51b01078c2ece2b2be8e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.104691572545613],"%B":[0.663336229365769],"%C":[0.0829713292788879],"%D":[0.115986099044309],"%NA":[0.0330147697654214]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"6228f3aede548d4a33eb8bf1617d0567","key":"6228f3aede548d4a33eb8bf1617d0567"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P3.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3333,8 +3277,8 @@ base no suporte ou nas características gráficas do mesmo.</p>
 <p><strong>Descritor:</strong> Diferenciar letras de outros sinais
 gráficos.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-023389e568b03df34b01" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-023389e568b03df34b01">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.934404865334492],"%B":[0.0182450043440487],"%C":[0.0139009556907037],"%D":[0.00651607298001738],"%NA":[0.0269331016507385]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"c2d33f7101185c9ac7d201c83c4b6593","key":"c2d33f7101185c9ac7d201c83c4b6593"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7fa20ae1ae24a2203863" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7fa20ae1ae24a2203863">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.934404865334492],"%B":[0.0182450043440487],"%C":[0.0139009556907037],"%D":[0.00651607298001738],"%NA":[0.0269331016507385]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"c2d33f7101185c9ac7d201c83c4b6593","key":"c2d33f7101185c9ac7d201c83c4b6593"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P4.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3342,8 +3286,8 @@ gráficos.</p>
 <p><strong>Descritor:</strong> Inferir informações a partir de elementos
 implícitos em um texto.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-c94a4f84706f8336a96b" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c94a4f84706f8336a96b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.110338835794961],"%B":[0.102085143353606],"%C":[0.705473501303215],"%D":[0.0499565595134666],"%NA":[0.0321459600347524]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"ebdc9987aa438c5eca586d565adfa14c","key":"ebdc9987aa438c5eca586d565adfa14c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fc47d20fbeb0ab0ea1b8" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fc47d20fbeb0ab0ea1b8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.110338835794961],"%B":[0.102085143353606],"%C":[0.705473501303215],"%D":[0.0499565595134666],"%NA":[0.0321459600347524]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"ebdc9987aa438c5eca586d565adfa14c","key":"ebdc9987aa438c5eca586d565adfa14c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P5.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3351,8 +3295,8 @@ implícitos em um texto.</p>
 <p><strong>Descritor:</strong> Identificar a relação fonema/grafema com
 correspondência sonora única.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-6bd678f70c74ffb10e09" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6bd678f70c74ffb10e09">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.896177237185056],"%B":[0.025629887054735],"%C":[0.0438748913987837],"%D":[0.0169417897480452],"%NA":[0.0173761946133797]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"1d18e08f28c5a2da779399d61afaebc7","key":"1d18e08f28c5a2da779399d61afaebc7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ed6818f4f16157d748f7" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ed6818f4f16157d748f7">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.896177237185056],"%B":[0.025629887054735],"%C":[0.0438748913987837],"%D":[0.0169417897480452],"%NA":[0.0173761946133797]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"1d18e08f28c5a2da779399d61afaebc7","key":"1d18e08f28c5a2da779399d61afaebc7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P6.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3360,8 +3304,8 @@ correspondência sonora única.</p>
 <p><strong>Descritor:</strong> Ler uma frase associando-a corretamente à
 uma imagem.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-f72d8d351b6268b5d9fb" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f72d8d351b6268b5d9fb">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0925282363162467],"%B":[0.80364900086881],"%C":[0.0564726324934839],"%D":[0.027367506516073],"%NA":[0.0199826238053866]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"fe6ff6d28ced06fe7152829286dd9945","key":"fe6ff6d28ced06fe7152829286dd9945"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8f8b406db5b10300d112" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8f8b406db5b10300d112">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0925282363162467],"%B":[0.80364900086881],"%C":[0.0564726324934839],"%D":[0.027367506516073],"%NA":[0.0199826238053866]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"fe6ff6d28ced06fe7152829286dd9945","key":"fe6ff6d28ced06fe7152829286dd9945"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P7.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3369,8 +3313,8 @@ uma imagem.</p>
 <p><strong>Descritor:</strong> Identificar o número de sílabas que
 formam uma palavra.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-fe87486d1ff699044ef5" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-fe87486d1ff699044ef5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.109904430929626],"%B":[0.0773240660295395],"%C":[0.0208514335360556],"%D":[0.772371850564726],"%NA":[0.0195482189400521]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"8c00f1c8943259438af59335a4516cd8","key":"8c00f1c8943259438af59335a4516cd8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7fb60083328929088db9" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7fb60083328929088db9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.109904430929626],"%B":[0.0773240660295395],"%C":[0.0208514335360556],"%D":[0.772371850564726],"%NA":[0.0195482189400521]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"8c00f1c8943259438af59335a4516cd8","key":"8c00f1c8943259438af59335a4516cd8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P8.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3378,8 +3322,8 @@ formam uma palavra.</p>
 <p><strong>Descritor:</strong> Inferir sentido a partir de elementos de
 um texto não-verbal.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-663457b4ccde8a532fc4" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-663457b4ccde8a532fc4">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0690703735881842],"%B":[0.0473501303214596],"%C":[0.832754126846221],"%D":[0.0338835794960904],"%NA":[0.0169417897480452]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"dce61de8eaad94626b8b1f784049e517","key":"dce61de8eaad94626b8b1f784049e517"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e4d6d50f8e733eaa26d4" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e4d6d50f8e733eaa26d4">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0690703735881842],"%B":[0.0473501303214596],"%C":[0.832754126846221],"%D":[0.0338835794960904],"%NA":[0.0169417897480452]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"dce61de8eaad94626b8b1f784049e517","key":"dce61de8eaad94626b8b1f784049e517"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P9.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3387,8 +3331,8 @@ um texto não-verbal.</p>
 <p><strong>Descritor:</strong> Reconhecer um assunto de um texto
 fundamentando-se na leitura individual do mesmo.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-c6d665495e57398a5782" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c6d665495e57398a5782">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.159860990443093],"%B":[0.618592528236316],"%C":[0.112510860121633],"%D":[0.0790616854908775],"%NA":[0.0299739357080799]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"45de6959b5474d78e3d277d1a36104a0","key":"45de6959b5474d78e3d277d1a36104a0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a41c36171607d7be8674" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a41c36171607d7be8674">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.159860990443093],"%B":[0.618592528236316],"%C":[0.112510860121633],"%D":[0.0790616854908775],"%NA":[0.0299739357080799]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"45de6959b5474d78e3d277d1a36104a0","key":"45de6959b5474d78e3d277d1a36104a0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/P10.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3396,8 +3340,8 @@ fundamentando-se na leitura individual do mesmo.</p>
 <p><strong>Descritor:</strong> Inferir informações a partir de elementos
 de implícitos em um texto.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-fd60cd8887e70edeb040" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-fd60cd8887e70edeb040">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.208514335360556],"%B":[0.532580364900087],"%C":[0.110338835794961],"%D":[0.122067767158992],"%NA":[0.026498696785404]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"26a6d74f87aa0fae3e7cbaca214cb654","key":"26a6d74f87aa0fae3e7cbaca214cb654"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-faaf3fc1366fd0cc4cae" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-faaf3fc1366fd0cc4cae">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.208514335360556],"%B":[0.532580364900087],"%C":[0.110338835794961],"%D":[0.122067767158992],"%NA":[0.026498696785404]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"26a6d74f87aa0fae3e7cbaca214cb654","key":"26a6d74f87aa0fae3e7cbaca214cb654"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <h3 id="questões-de-matemática">Questões de Matemática</h3>
 <div class="layout-chunk" data-layout="l-body">
@@ -3406,8 +3350,8 @@ de implícitos em um texto.</p>
 <p><strong>Descritor:</strong> Associar um número à sua respectiva
 representação simbólica.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-e2a0032e7f9331be7e3e" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e2a0032e7f9331be7e3e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0425716768027802],"%B":[0.025629887054735],"%C":[0.886185925282363],"%D":[0.0251954821894005],"%NA":[0.0204170286707211]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"346fb59b79ca4b9ebb31d906c914b38f","key":"346fb59b79ca4b9ebb31d906c914b38f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8ecae551c3795b71eff6" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8ecae551c3795b71eff6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0425716768027802],"%B":[0.025629887054735],"%C":[0.886185925282363],"%D":[0.0251954821894005],"%NA":[0.0204170286707211]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"346fb59b79ca4b9ebb31d906c914b38f","key":"346fb59b79ca4b9ebb31d906c914b38f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M2.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3415,16 +3359,16 @@ representação simbólica.</p>
 <p><strong>Descritor:</strong> Associar a contagem de coleções de
 objetos à representação numérica de suas respectivas quantidades.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-b74d6b8468f42bf30620" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b74d6b8468f42bf30620">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0139009556907037],"%B":[0.937445699391833],"%C":[0.0312771503040834],"%D":[0.00304083405734144],"%NA":[0.0143353605560382]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"fc65c37a74dd40180d0eb9f34d6201a2","key":"fc65c37a74dd40180d0eb9f34d6201a2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-bf7486f864ed0ba80719" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-bf7486f864ed0ba80719">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0139009556907037],"%B":[0.937445699391833],"%C":[0.0312771503040834],"%D":[0.00304083405734144],"%NA":[0.0143353605560382]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"fc65c37a74dd40180d0eb9f34d6201a2","key":"fc65c37a74dd40180d0eb9f34d6201a2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M3.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
 <p><strong>Descritor:</strong> Ordenar números naturais.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-d485065e5cfc89e92151" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d485065e5cfc89e92151">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.139443961772372],"%B":[0.0734144222415291],"%C":[0.665073848827107],"%D":[0.0890529973935708],"%NA":[0.0330147697654214]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"930c508bd0c0d6f130920bc9ca94bd19","key":"930c508bd0c0d6f130920bc9ca94bd19"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4ffe47ea80f668f25947" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4ffe47ea80f668f25947">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.139443961772372],"%B":[0.0734144222415291],"%C":[0.665073848827107],"%D":[0.0890529973935708],"%NA":[0.0330147697654214]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"930c508bd0c0d6f130920bc9ca94bd19","key":"930c508bd0c0d6f130920bc9ca94bd19"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M4.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3432,8 +3376,8 @@ objetos à representação numérica de suas respectivas quantidades.</p>
 <p><strong>Descritor:</strong> Resolver problema que demanda a ação de
 juntar.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-3eee80d18ede769f782b" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-3eee80d18ede769f782b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0169417897480452],"%B":[0.261946133796699],"%C":[0.0212858384013901],"%D":[0.669852302345786],"%NA":[0.0299739357080799]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"f107b8a4124a1883c839525b2ef18673","key":"f107b8a4124a1883c839525b2ef18673"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0fe07792715c16684271" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0fe07792715c16684271">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0169417897480452],"%B":[0.261946133796699],"%C":[0.0212858384013901],"%D":[0.669852302345786],"%NA":[0.0299739357080799]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"f107b8a4124a1883c839525b2ef18673","key":"f107b8a4124a1883c839525b2ef18673"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M5.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3441,8 +3385,8 @@ juntar.</p>
 <p><strong>Descritor:</strong> Identificar figuras geométricas
 planas.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-493fb2267771be231daa" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-493fb2267771be231daa">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.634231103388358],"%B":[0.126846220677672],"%C":[0.191572545612511],"%D":[0.0295395308427454],"%NA":[0.0178105994787142]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"007edbb5841727a250d3355d675eaae9","key":"007edbb5841727a250d3355d675eaae9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7b369c62c2851edf57a8" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7b369c62c2851edf57a8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.634231103388358],"%B":[0.126846220677672],"%C":[0.191572545612511],"%D":[0.0295395308427454],"%NA":[0.0178105994787142]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"007edbb5841727a250d3355d675eaae9","key":"007edbb5841727a250d3355d675eaae9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M6.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3450,8 +3394,8 @@ planas.</p>
 <p><strong>Descritor:</strong> Identificar a localização de pessoas ou
 objetos no espaço segundo um dado ponto de referência.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-71d4bde7e7601d11859d" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-71d4bde7e7601d11859d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0564726324934839],"%B":[0.879235447437011],"%C":[0.0217202432667246],"%D":[0.0160729800173762],"%NA":[0.026498696785404]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"1cf49d2ee78fdfcd9b6128ca6d6f0f14","key":"1cf49d2ee78fdfcd9b6128ca6d6f0f14"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0def08359c30125098ed" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0def08359c30125098ed">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0564726324934839],"%B":[0.879235447437011],"%C":[0.0217202432667246],"%D":[0.0160729800173762],"%NA":[0.026498696785404]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"1cf49d2ee78fdfcd9b6128ca6d6f0f14","key":"1cf49d2ee78fdfcd9b6128ca6d6f0f14"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M7.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3459,24 +3403,24 @@ objetos no espaço segundo um dado ponto de referência.</p>
 <p><strong>Descritor:</strong> Identificar a localização de pessoas ou
 objetos no espaço segundo um dado ponto de referência.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-4f0196eae1e00e844e0f" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-4f0196eae1e00e844e0f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0721112076455256],"%B":[0.0612510860121633],"%C":[0.0130321459600348],"%D":[0.836663770634231],"%NA":[0.0169417897480452]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"5be58896183c953c94df17049b8a30f3","key":"5be58896183c953c94df17049b8a30f3"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fae5575addf863814823" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fae5575addf863814823">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.0721112076455256],"%B":[0.0612510860121633],"%C":[0.0130321459600348],"%D":[0.836663770634231],"%NA":[0.0169417897480452]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"5be58896183c953c94df17049b8a30f3","key":"5be58896183c953c94df17049b8a30f3"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M8.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
 <p><strong>Descritor:</strong> Comparar comprimentos.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-6bdcc5d6dc790b446ece" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6bdcc5d6dc790b446ece">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.00434404865334492],"%B":[0.978279756733275],"%C":[0.00130321459600348],"%D":[0.00477845351867941],"%NA":[0.0112945264986968]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"a6d1b83a750a31ddc30f586a21c9312c","key":"a6d1b83a750a31ddc30f586a21c9312c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-83f81b9d04b6da08d9f2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-83f81b9d04b6da08d9f2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.00434404865334492],"%B":[0.978279756733275],"%C":[0.00130321459600348],"%D":[0.00477845351867941],"%NA":[0.0112945264986968]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"a6d1b83a750a31ddc30f586a21c9312c","key":"a6d1b83a750a31ddc30f586a21c9312c"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M9.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
 <p><strong>Descritor:</strong> Comparar números naturais.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-078c38a2cb6746cc62f3" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-078c38a2cb6746cc62f3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.721112076455256],"%B":[0.0360556038227628],"%C":[0.052128583840139],"%D":[0.170286707211121],"%NA":[0.0204170286707211]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"65da71f5bb575747ebecc86399113abe","key":"65da71f5bb575747ebecc86399113abe"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-32b3762fed50933e0133" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-32b3762fed50933e0133">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.721112076455256],"%B":[0.0360556038227628],"%C":[0.052128583840139],"%D":[0.170286707211121],"%NA":[0.0204170286707211]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"65da71f5bb575747ebecc86399113abe","key":"65da71f5bb575747ebecc86399113abe"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/3ANO/M10.png" width="50%" style="display: block; margin: auto;" /></p>
@@ -3484,8 +3428,8 @@ objetos no espaço segundo um dado ponto de referência.</p>
 <p><strong>Descritor:</strong> Calcular o resultado de operação de
 subtração de números naturais.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-f0e10d302bd9e836aea7" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f0e10d302bd9e836aea7">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.158557775847089],"%B":[0.0968722849695917],"%C":[0.573414422241529],"%D":[0.138575152041703],"%NA":[0.0325803649000869]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"8264de12dfc1b01dbbe2e498f230d559","key":"8264de12dfc1b01dbbe2e498f230d559"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c201e850df35a939d228" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c201e850df35a939d228">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"%A":[0.158557775847089],"%B":[0.0968722849695917],"%C":[0.573414422241529],"%D":[0.138575152041703],"%NA":[0.0325803649000869]},"columns":[{"accessor":"%A","name":"%A","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%B","name":"%B","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%C","name":"%C","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center","style":[{"background":"#ff9500"}]},{"accessor":"%D","name":"%D","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"},{"accessor":"%NA","name":"%NA","type":"numeric","format":{"cell":{"digits":2,"percent":true},"aggregated":{"digits":2,"percent":true}},"align":"center"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"highlight":true,"striped":true,"dataKey":"8264de12dfc1b01dbbe2e498f230d559","key":"8264de12dfc1b01dbbe2e498f230d559"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
